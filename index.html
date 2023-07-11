@@ -1,126 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style>
-      body {
-        background-color: white;
-        text-align: center;
-        color: aliceblue;
-      }
-      #place {
-        font-weight: 900;
-        text-shadow: 1px 1px 0px red;
-      }
-      #box {
-        background-color: rgb(23, 23, 65);
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-        padding: 20px;
-        width: 600px;
-        height: 390px;
-      }
-      #score-box {
-        display: flex;
-        justify-content: space-around;
-      }
-
-      #Home-score-board-el,
-      #Away-score-board-el {
-        border: 1px solid white;
-        padding: 30px;
-        font-weight: 900;
-        font-family: "Cursed Timer ULiL";
-        font-size: xx-large;
-        text-shadow: 1px 1px 0px red;
-        font-size: 40px;
-        background-color: black;
-        color: white;
-      }
-      #Away-score-board-el {
-        background-color: white;
-        color: black;
-        border: 1px solid black;
-      }
-      #btn,
-      #btn-iii-el {
-        padding: 5px 20px;
-        border: 1px solid white;
-        border-radius: 5px;
-        color: white;
-        background-color: black;
-        font-family: "Cursed Timer ULiL";
-        font-weight: 300;
-      }
-
-      #btn:hover,
-      #btn-iii-el:hover {
-        color: black;
-        background-color: white;
-        border-radius: 15px;
-      }
-
-      #home-btn,
-      #away-btn {
-        margin: 10px;
-      }
-      #home-club-el,
-      #away-club-el {
-        font-family: "Times New Roman", Times, serif;
-        text-shadow: 1px 0px 1px red;
-      }
-      #btn-ii-el {
-        margin: 40px;
-        padding: 0 10px;
-        background-color: black;
-        color: white;
-        border: 1px solid whitesmoke;
-      }
-      #btn-ii-el:hover {
-        padding: 2px 15px;
-        border: 1px solid black;
-        color: black;
-        background-color: aliceblue;
-      }
-    </style>
-    <title>Document</title>
+    <link rel="stylesheet" href="/main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basketball Score Board</title>
   </head>
   <body>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="http://fonts.cdnfonts.com/css/cursed-timer-ulil"
-      rel="stylesheet"
-    />
-    <div id="box">
-      <div id="score-box">
-        <div>
-          <h1 id="place">HOME</h1>
-          <span id="home-club-el"> </span>
-          <h1 id="Home-score-board-el">0</h1>
-          <div id="home-btn">
-            <button id="btn" onclick="Home1()">+1</button>
-            <button id="btn" onclick="Home2()">+2</button>
-            <button id="btn" onclick="Home3()">+3</button>
-          </div>
-          <button id="btn-iii-el" onclick="remove1()">-1</button>
+    <div class="Scoreboard">
+      <div class="Home-scoreboard">
+        <h1>HOME</h1>
+        <p>RANGERS FC</p>
+        <div class="scoresheet">
+            <h1 class="homeScoresheet">0</h1>
         </div>
-        <div>
-          <h1 id="place">AWAY</h1>
-          <span id="away-club-el"></span>
-          <h1 id="Away-score-board-el">0</h1>
-          <div id="away-btn">
-            <button id="btn" onclick="Away1()">+1</button>
-            <button id="btn" onclick="Away2()">+2</button>
-            <button id="btn" onclick="Away3()">+3</button>
+        <div class="score-btn">
+          <div class="score-btn-box">
+            <button onclick="Home1()">+1</button>
+            <button onclick="Home2()">+2</button>
+            <button onclick="Home3()">+3</button>
           </div>
-          <button id="btn-iii-el" onclick="remove2()">-1</button>
+          <button class="remove-btn" onclick="removeHome()">-1</button>
         </div>
       </div>
-      <div>
-        <button id="btn-ii-el" onclick="reset()">RESET</button>
+      <div class="Away-scoreboard">
+        <h1>AWAY</h1>
+        <p>Drake FC</p>
+        <div class="scoresheet">
+            <h1 class="awayScoresheet">0</h1>
+        </div>
+        <div class="score-btn">
+          <div class="score-btn-box">
+            <button onclick="Away1()">+1</button>
+            <button onclick="Away2()">+2</button>
+            <button onclick="Away3()">+3</button>
+          </div>
+          <button onclick="removeAway()">-1</button>
+        </div>
+      </div>
+      <div class="reset">
+        <button class="reset-btn" onclick="reset()">RESET</button>
       </div>
     </div>
-    <script src="index.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>

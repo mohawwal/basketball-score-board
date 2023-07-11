@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(227, 227, 243);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Scoreboard {
+  background-color: rgb(227, 227, 243);
+  text-align: center;
+  margin: 0 auto;
+  width:  80%;
+}
+h1 {
+  margin: 0;
+}
+.scoresheet h1{
+  font-size: 80px;
+}
+p {
+  margin: 0rem;
+}
+
+.Home-scoreboard, .Away-scoreboard {
+  margin: 1.5rem auto 3rem;
+}
+
+.scoresheet {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  margin-bottom: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.score-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.score-btn button {
+  padding: 0.4rem 0.9rem;
+  border: 1px dashed black;
+  background-color: white;
+  border-radius: 5px;
+}
+.score-btn button:hover,
+.score-btn button:focus {
+  background-color: black;
+  color: white;
+}
+
+.reset {
+  margin: 0;
+  text-align: center;
+}
+.reset-btn {
+  padding: 0.6rem 1rem;
+  background-color: black;
+  color: white;
+}
+.reset-btn:hover,
+.reset-btn:focus {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+}
+
+@media (min-width: 600px) and (max-width: 1338px) {
+  .Scoreboard {
+    width: 95%;
+  }
+  .score-btn button {
+    padding: 0rem;
+    
+  }
+}
+
+@media (min-width: 600px) {
+  .score-btn button {
+      padding: 1rem 2.5rem;
+      font-size: 2rem;
+      border-radius: 10px;
+  }
+  .scoresheet h1{
+      font-size: 100px;
+  }
+  .Scoreboard {
+      display: grid;
+      grid-template: "Home Away"
+        "Reset Reset";
+        grid-gap: 10%;
+  }
+  .Home-scoreboard {
+    grid-area: Home;
+  }
+  .Away-scoreboard {
+    grid-area: Away;
+  }
+  .reset {
+    grid-area: Reset;
+  }
+  .scoresheet {
+      height: 20rem;
+  }
+  .reset-btn {
+      padding: 2rem 4rem;
+      font-size: 1.7rem;
+  }
+}
+
